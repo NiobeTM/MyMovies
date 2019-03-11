@@ -99,7 +99,6 @@ public final class DbManager {
                 .map(list -> {
                     try {
                         Movie mv = (Movie) query.setParameter("favoriteList", list).getSingleResult();
-                        System.out.println(mv.getTitle());
                         return mv;
                     } catch (Exception exception) {
                         return null;
